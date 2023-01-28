@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+main {
+  font-size: 15px;
+  line-height: 30px;
+  color: #828282;
+  font-family: var(--font-inter);
+}
