@@ -43,4 +43,8 @@ img {
   left: 0;
   background-color: #000000;
   clip-path: inset(0 0 0 0);
+
+  @screen sm {
+    display: none;
+  }
 }
