@@ -1,6 +1,6 @@
 import gsap, { Power3 } from "gsap";
 import Image from "next/image"
-import React, { Component, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import GsapAnimation from "./gsap"
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
@@ -8,7 +8,9 @@ const Hero = () => {
     const component = useRef(null);
     const [loading, setLoading] = useState(true);
     gsap.registerPlugin(ScrollTrigger);
-    useLayoutEffect(() => {
+
+    useEffect(() => {
+        let tl = gsap.timeline()
         let hero = document.querySelector(".hero-section"),
             imgs = hero.querySelectorAll("img"),
             anime_wrapper = hero.querySelector(".animation-wrapper"),
@@ -25,8 +27,8 @@ const Hero = () => {
         });
 
         // Add scrolling parallax animation
-        let ctx = gsap.context(() => {
-            let tl = gsap.timeline({
+        const initAnime = () => {
+            tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: anime_wrapper,
                     start: "top top",
@@ -43,9 +45,16 @@ const Hero = () => {
                 .fromTo([slides[1], slides[3]], { y: 0 }, { y: -150 }, "start")
                 .to([slides[0], slides[1]], { x: "-200%" }, "start")
                 .to([slides[3], slides[4]], { x: "200%" }, "start")
-                .fromTo(slides[2], { clipPath: 'inset(30% 41% 0% 41% round 5px)' }, { clipPath: 'inset(0% 0% 0% 0% round 0px)' }, "start")
-        }, component);
+                .fromTo(slides[2], { clipPath: 'inset(35% 41% 0% 41% round 5px)' }, { clipPath: 'inset(0% 0% 0% 0% round 0px)' }, "start")
+        }
 
+        let ctx = gsap.context(() => {
+            let mm = gsap.matchMedia();
+
+            mm.add("(min-width: 991px)", () => {
+                initAnime()
+            });
+        }, component);
         return () => ctx.revert()
     }, [])
 
@@ -53,11 +62,16 @@ const Hero = () => {
         <>
             {loading && <Loading />}
             <section className="hero-section" ref={component}>
-                <div className="container fixed left-1/2 -translate-x-1/2">
+                <div className="container fixed left-1/2 -translate-x-1/2 md:absolute">
                     <div className="row">
                         <div className="col-12">
-                            <GsapAnimation className="fadeIn">
-                                <Image className="mx-auto logo w-[150px]" src="/assets/ysdeveloper_logo.svg" width={150} height={60} alt="Logo" />
+                            <GsapAnimation className="fadeIn mt-[150px] sm:mt-[100px]">
+                                <Image className="mx-auto logo w-[150px] sm:w-[100px]" src="/assets/ysdeveloper_logo.svg" width={150} height={60} alt="Logo" />
+                            </GsapAnimation>
+                            <GsapAnimation
+                                as="h2"
+                                className="fadeIn text-center font-dancing text-[60px] leading-none text-white mt-[60px] md:text-[35px] sm:text-[30px] sm:mt-[30px]">
+                                Capturing your precious moments
                             </GsapAnimation>
                         </div>
                     </div>

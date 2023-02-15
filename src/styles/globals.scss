@@ -1,6 +1,9 @@
 // Core
-@import './core/reset';
-@import './core/typography';
+@import "./core/reset";
+@import "./core/typography";
 
 // Vendor
-@import './vendors/bootstrap-grid.scss';
+@import "./vendors/bootstrap-grid.scss";
+
+// Components
+@import "./components/hero-section";
