@@ -65,8 +65,8 @@ const Hero = () => {
                 <div className="container fixed left-1/2 -translate-x-1/2 md:absolute">
                     <div className="row">
                         <div className="col-12">
-                            <GsapAnimation className="fadeIn mt-[150px] sm:mt-[100px]">
-                                <Image className="mx-auto logo w-[150px] sm:w-[100px]" src="/assets/ysdeveloper_logo.svg" width={150} height={60} alt="Logo" />
+                            <GsapAnimation className="fadeIn mt-[150px] sm:mt-[60px]">
+                                <Image className="mx-auto logo w-[150px] sm:w-[90px]" src="/assets/ysdeveloper_logo.svg" width={150} height={60} alt="Logo" />
                             </GsapAnimation>
                             <GsapAnimation
                                 as="h2"
@@ -78,21 +78,21 @@ const Hero = () => {
                 </div>
                 <div className="animation-wrapper">
                     <div className="slide">
-                        <Image src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" width={350} height={60} alt="Logo" />
+                        <Image src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" width={350} height={600} alt="Logo" />
                     </div>
                     <div className="slide">
-                        <Image src="https://images.unsplash.com/photo-1547314283-befb6cc5cf29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmV3JTIwemVhbGFuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" width={350} height={60} alt="Logo" />
-                        <Image src="https://images.unsplash.com/photo-1523049820105-c2e73204bac1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG5ldyUyMHplYWxhbmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" width={350} height={60} alt="Logo" />
+                        <Image src="https://images.unsplash.com/photo-1547314283-befb6cc5cf29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmV3JTIwemVhbGFuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" width={350} height={300} alt="Logo" />
+                        <Image src="https://images.unsplash.com/photo-1523049820105-c2e73204bac1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG5ldyUyMHplYWxhbmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" width={350} height={300} alt="Logo" />
                     </div>
                     <div className="slide">
                         <Image src="https://images.unsplash.com/photo-1612975702762-7cc2733b3e75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHRpZ2VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=2500&q=90" priority width={2500} height={60} alt="Logo" />
                     </div>
                     <div className="slide">
-                        <Image src="https://images.unsplash.com/photo-1515268064940-5150b7c29f35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdhbGxwYXBlcnMlMjA0a3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=80" width={350} height={60} alt="Logo" />
-                        <Image src="https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" width={350} height={60} alt="Logo" />
+                        <Image src="https://images.unsplash.com/photo-1515268064940-5150b7c29f35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdhbGxwYXBlcnMlMjA0a3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=80" width={350} height={300} alt="Logo" />
+                        <Image src="https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" width={350} height={300} alt="Logo" />
                     </div>
                     <div className="slide">
-                        <Image src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8anVuZ2xlJTIwYXQlMjBuaWdodHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=80" width={350} height={60} alt="Logo" />
+                        <Image src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8anVuZ2xlJTIwYXQlMjBuaWdodHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=80" width={350} height={600} alt="Logo" />
                     </div>
                 </div>
             </section>
